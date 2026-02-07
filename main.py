@@ -42,7 +42,7 @@ class VintedBot(discord.Client):
     async def on_ready(self):
         print(f"--- {self.user} ONLINE ÉS FIGYEL ---")
 
-    @tasks.loop(seconds=95) # Alapidő: kb. 1.5 perc
+    @tasks.loop(seconds=115) # Alapidő: kb. 1.5 perc
     async def monitor(self):
         # Véletlenszerű várakozás (Anti-Ban Jitter)
         await asyncio.sleep(random.uniform(1, 15))
